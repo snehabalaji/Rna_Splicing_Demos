@@ -10,7 +10,7 @@ This page includes:
 * SpliceAI Usage 
 * Glossary 
 
-To learn more about RNA splicing and deep learning prediction in this field, visit this [page]. I strongly recommended gathering foundational knowledge in both fields before proceeding to use the splicing technologies. 
+To learn more about RNA splicing and deep learning prediction in this field, visit this [page](https://snehabalaji.github.io/Technical/). I strongly recommended gathering foundational knowledge in both fields before proceeding to use the splicing technologies. 
 
 Credits: 
 
