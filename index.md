@@ -46,8 +46,10 @@ With specific reference to the file formats:
 Here is an example of the inputs for each of the tools: 
 * **Pangolin**: The file is from gencode.v38 specifically the lift 37.annotation (which is the 37 version annotation of the human genome GRCh38):
 <img width="1435" alt="Screen Shot 2022-08-25 at 11 22 54 AM" src="https://user-images.githubusercontent.com/98296345/186740518-4e363f60-0cc9-43e4-87b8-04a07d0cbcac.png">
+
 * **MTSplice**: Here is an example of a possible MTSplice’s input from the ClinVar database: 
 <img width="1440" alt="Screen Shot 2022-08-25 at 2 23 59 PM" src="https://user-images.githubusercontent.com/98296345/186740649-fab8783f-709e-4c0c-94be-9a418a9abd0d.png">
+
 * **SpliceAI**: Here is an example input: 
 <img width="538" alt="Screen Shot 2022-08-25 at 11 54 43 AM" src="https://user-images.githubusercontent.com/98296345/186740525-def328ae-2dc2-441b-b614-ada58848bf4a.png">
 
