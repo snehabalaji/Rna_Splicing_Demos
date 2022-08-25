@@ -238,6 +238,12 @@ SpliceAI=A|NEB|0.01|0.00|0.00|0.74|43|3|-26|3,C|NEB|0.04|0.00|0.00|0.71|43|3|-26
 ```
 Here, 0.01 is the increase and 0.00 is the decrease in the probability that the site is used as an acceptor. 
 
+## Another Current Tool
+Apart from the three tools listed above, there are other tools in the field at this moment that are also efficient and accurate at predicting RNA splicing. For example, a tool developed by Thanyathorn Thanapattheerakul, Worrawat Engchuan and Jonathan H. Chan​ uses convolutional neural networks to predict splicing. The github repository for this tool can be found [here](https://github.com/smiile8888/rna-splice-sites-recognition). 
+
+In addition, the study associated with this tool found that CNN based models performed much better than the non-CNN models. Also that this specific CNN model was found to have room for improvement in predicting negative splicing sequences. Although the model is able to distinguish pathogenic and benign variants to a certain extent. 
+
+
 ## Glossary 
 * Gene Transfer File (GTF): a type of file formatting that is used for storing information about genetic structure. 
 * Neural Networks: computing algorithms modelled after human neural connections in the brain. 
@@ -248,13 +254,10 @@ Here, 0.01 is the increase and 0.00 is the decrease in the probability that the 
 * Alternative Splicing: different splice sites that allow for a single parent gene to code for many different proteins. 
 * Weights: In the context of deep learning weights are numerical values that represent the strength of the connection between two neurons. 
 * Nodes: a computational unit made of an input, transfer connection and output. 
+* Convolutional Neural Networks: is a type of neural network that processes data in a grid-like format like an image by assigning importance scores and then learning. 
 
 ## References 
 * Zeng, T., Li, Y.I. Predicting RNA splicing from DNA sequence using Pangolin. Genome Biol 23, 103 (2022). https://doi.org/10.1186/s13059-022-02664-4 
 * Kishore Jaganathan, Sofia Kyriazopoulou Panagiotopoulou, Jeremy F. McRae, ..., Serafim Batzoglou, Stephan J. Sanders, Kyle Kai-How Farh. “Predicting splicing from primary sequence with deep learning”. Cell. (n.d.). Retrieved June 20, 2022, from https://www.cell.com/cell/fulltext/S0092-8674(18)31629-5 
 * Cheng, J., Çelik, M.H., Kundaje, A. et al. MTSplice predicts effects of genetic variants on tissue-specific splicing. Genome Biol 22, 94 (2021). https://doi.org/10.1186/s13059-021-02273-7 
-
-
-
-
-
+* Thanapattheerakul T, Engchuan W, Chan JH. 2020. Predicting the effect of variants on splicing using Convolutional Neural Networks. PeerJ 8:e9470 https://doi.org/10.7717/peerj.9470 
