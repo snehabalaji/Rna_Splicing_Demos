@@ -52,6 +52,7 @@ Here is an example of the inputs for each of the tools:
 <img width="1440" alt="Screen Shot 2022-08-25 at 2 23 59 PM" src="https://user-images.githubusercontent.com/98296345/186740649-fab8783f-709e-4c0c-94be-9a418a9abd0d.png">
 
 * **SpliceAI**: Here is an example input: 
+
 <img width="538" alt="Screen Shot 2022-08-25 at 11 54 43 AM" src="https://user-images.githubusercontent.com/98296345/186740525-def328ae-2dc2-441b-b614-ada58848bf4a.png">
 
 However, pre-processing is often required before feeding genetic information to these tools. Below is a table of the various preprocessing methods for each tool: 
