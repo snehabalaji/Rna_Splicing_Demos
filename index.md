@@ -1,6 +1,6 @@
-## A Helpful Guide to RNA Splicing Technologies
+## A Helpful Guide to RNA Splicing Tools
 
-*A beginner’s step-by-step guide to using current RNA Splicing prediction technologies (Pangolin, MTSplice and SpliceAI).* 
+*A beginner’s step-by-step guide to using current RNA Splicing prediction tools (Pangolin, MTSplice and SpliceAI).* 
 
 This page includes: 
 * Input and Output Formats 
@@ -10,26 +10,30 @@ This page includes:
 * SpliceAI Usage 
 * Glossary 
 
-To learn more about RNA splicing and deep learning prediction in this field, visit this [page](https://snehabalaji.github.io/Technical/). I strongly recommended gathering foundational knowledge in both fields before proceeding to use the splicing technologies. 
+To learn more about RNA splicing and deep learning prediction in this field, visit this [page](https://snehabalaji.github.io/Technical/). I strongly recommended gathering foundational knowledge in both fields before proceeding to use the splicing tools. 
 
 Credits: 
+I would like to thank the authors of the following papers for making their tools free and easily accessible. The tools discussed in this webpage are credited to the following people: 
+* Pangolin: Created by Zeng, T. and Li, Y.I. The github repository can be found [here](https://github.com/tkzeng/Pangolin).
+* SpliceAI: Created by Kishore Jaganathan,Sofia Kyriazopoulou Panagiotopoulou,Jeremy F. McRae,Siavash Fazel Darbandi,David Knowles,Yang I. Li,Jack A. Kosmicki,Juan Arbelaez,Wenwu Cui,Grace B. Schwartz,Eric D. Chow,Efstathios Kanterakis,Hong Gao,Amirali Kia et al.. The github repository can be found [here](https://github.com/Illumina/SpliceAI).
+* MTSplice: Created by Jun Cheng, Thi Yen Duong Nguyen, Kamil J Cygan, Muhammed Hasan Çelik, William G Fairbrother, Žiga Avsec, Julien Gagneur. The github repository can be found [here](https://github.com/snehabalaji/MMSplice_MTSplice).
 
 ## Introduction 
 Hi everyone! My name is Sneha Balaji and I’m a second year [Engineering Science](https://engsci.utoronto.ca/program/what-is-engsci/)  student at the University of Toronto in Toronto, Canada! This summer I had the opportunity to intern at [King Mongkut’s University of Technology Thonburi](https://www.kmutt.ac.th/en/) (KMUTT) in Bangkok, Thailand. 
 
-Over the course of my summer, my research mainly focused on RNA splicing, specifically about the various prediction technologies in this ever-growing field. As someone who has freshly finished first year and with minimal technical expertise, I found it quite the challenge to understand and effectively use these technologies. So, I decided to create this blog so that individuals with less technical backgrounds can have an easier time accessing and using these technologies. Feel free to reference the **Glossary** at the bottom of this page for any unknown terminology!
+Over the course of my summer, my research mainly focused on RNA splicing, specifically about the various prediction tools in this ever-growing field. As someone who has freshly finished first year and with minimal technical expertise, I found it quite the challenge to understand and effectively use these tools. So, I decided to create this blog so that individuals with less technical backgrounds can have an easier time accessing and using these tools. Feel free to reference the **Glossary** at the bottom of this page for any unknown terminology!
 
-This blog will focus on three current technologies in particular: Pangolin, MTSplice and SpliceAI. A bit about these technologies: 
+This blog will focus on three current tools in particular: Pangolin, MTSplice and SpliceAI. A bit about these tools: 
 * **Pangolin**: a deep learning technique that uses DNA sequences from four different species to predict both usage of a splice site and probability with reasonable accuracy in genetic variations. 
 * **MTSplice and MMSplice**: both predict the effect of genetic variants using cassette exons using human tissues. MTSplice has been trained on tissue-specific variants, giving it tissue-specific prediction abilities as opposed to MMSplice.
 * **SpliceAI**: a neural network that predicts splice sites from any given pre-mRNA sequence with a high degree of accuracy.
 
-The technologies above mainly focus on predicting the effects of a multitude of variants on RNA splicing, aiming to help scientists and researchers better understand the complex world of alternative splicing. 
+The tools above mainly focus on predicting the effects of a multitude of variants on RNA splicing, aiming to help scientists and researchers better understand the complex world of alternative splicing. 
 
 ## Input & Output Formats 
 Pangolin, MTSplice and SpliceAI were created at different times by different people and as a result, operate using different input and output formats. 
 
-Below is a helpful table of the input and output formats of each of the technologies: 
+Below is a helpful table of the input and output formats of each of the tools: 
 
 <img width="440" alt="Screen Shot 2022-08-23 at 3 25 13 PM" src="https://user-images.githubusercontent.com/98296345/186252270-58dfdd63-d700-4538-84f3-5109f0ca39e8.png">
 
@@ -39,11 +43,19 @@ With specific reference to the file formats:
 * **VCF**: Known as Variant Call Format files are a text used to store gene sequences. 
 * **CSV**: Known as Comma Separated Value files are text files that can be easily arranged as a spreadsheet.  
 
-However, pre-processing is often required before feeding genetic information to these technologies. Below is a table of the various preprocessing methods for each technology: 
+Here is an example of the inputs for each of the tools: 
+* **Pangolin**: The file is from gencode.v38 specifically the lift 37.annotation (which is the 37 version annotation of the human genome GRCh38):
+<img width="1435" alt="Screen Shot 2022-08-25 at 11 22 54 AM" src="https://user-images.githubusercontent.com/98296345/186740518-4e363f60-0cc9-43e4-87b8-04a07d0cbcac.png">
+* **MTSplice**: Here is an example of a possible MTSplice’s input from the ClinVar database: 
+<img width="1440" alt="Screen Shot 2022-08-25 at 2 23 59 PM" src="https://user-images.githubusercontent.com/98296345/186740649-fab8783f-709e-4c0c-94be-9a418a9abd0d.png">
+* **SpliceAI**: Here is an example input: 
+<img width="538" alt="Screen Shot 2022-08-25 at 11 54 43 AM" src="https://user-images.githubusercontent.com/98296345/186740525-def328ae-2dc2-441b-b614-ada58848bf4a.png">
+
+However, pre-processing is often required before feeding genetic information to these tools. Below is a table of the various preprocessing methods for each tool: 
 
 <img width="646" alt="Screen Shot 2022-08-23 at 3 25 28 PM" src="https://user-images.githubusercontent.com/98296345/186252415-bdf29f99-a74a-4f6d-acab-4d18dff51df6.png">
 
-Specifics on each preprocessing method will be discussed under each technology. 
+Specifics on each preprocessing method will be discussed under each tool. 
 
 In addition to feeding the model the gene file for prediction, each model also requires the input of an annotation file in the GTF format. These standard human genome files can be sourced from [ensembl](https://useast.ensembl.org/Homo_sapiens/Info/Index) or [gencode](https://www.gencodegenes.org/human/). 
 
@@ -58,9 +70,9 @@ These predictions refer to:
 * **Tissue-Specific**: Splicing can vary depending on the tissue it is performed in, meaning many alternative sequences from the same root DNA. Common tissues this occurs in are the brain, testis, heart and liver. More information about this feature can be found on this background information page. 
 * **Splicing Efficiency**: 
 
-## Setting up a Google Collab Notebook 
+## Setting up a Google Colab Notebook 
 
-All of these three technologies are offered for the public to use on GitHub, with the option of running the code on Google Collab, which will be the focus of this page. To copy any of the technologies to your own Collab Notebook, go to:
+Some of these tools are offered for the public to use on GitHub, with the option of running the code on Google Colab, which will be the focus of this page. To copy any of the tools to your own Colab Notebook, go to:
 ```
 file -> save a copy in drive 
 ```
@@ -74,7 +86,7 @@ No specific preprocessing required.
 
 ### Usage 
 
-Pangolin can be executed using a single command from either the command line (if downloaded to computer) or in a Google Collab notebook. Here’s an example: 
+Pangolin can be executed using a single command from either the command line (if downloaded to computer) or in a Google Colab notebook. Here’s an example: 
 ```
 pangolin examples/brca.vcf GRCh37.primary_assembly.genome.fa.gz gencode.v38lift37.annotation.Ensembl_canonical.db brca_pangolin
 ```
@@ -129,7 +141,7 @@ Left-normalization which is shifting the position of a variant to the leftmost p
 `bcftools norm -f reference.fasta -o out.vcf in.vcf` 
 
 ### Usage 
-MMSplice can be used in a Google Collab environment, which is offered on the project’s GitHub page. To use MMSplice (the non-tissue specific version), the model can be run with the various input files in a set of commands like this: 
+MMSplice can be used in a Google Colab environment, which is offered on the project’s GitHub page. To use MMSplice (the non-tissue specific version), the model can be run with the various input files in a set of commands like this: 
 ```
 dl = SplicingVCFDataloader(genome_version, fasta, vcf)
 ``` 
@@ -139,7 +151,7 @@ model = MMSplice()
 output_csv = 'preds.csv'
 predict_save(model, dl, output_csv, pathogenicity=True, splicing_efficiency=True)
 ```
-In addition, certain post-processing steps can also be made using pandas, as seen in the Google Collab notebook. 
+In addition, certain post-processing steps can also be made using pandas, as seen in the Google Colab notebook. 
 
 Other usage parameters include: 
 * To have tissue-specific predicting, set `tissue_specific=True` in `SplicingVCFDataloader`. For example:
@@ -149,7 +161,7 @@ dl = SplicingVCFDataloader(gtf, fasta, vcf, tissue_specific=True)
 
 ### Accuracy 
 
-MTSplice is one of the more accurate current RNA splicing technologies, however a cassette extron based model may prove to be ineffective when predicting complex mutations that affect multiple splice sites. 
+MTSplice is one of the more accurate current RNA splicing tools, however a cassette extron based model may prove to be ineffective when predicting complex mutations that affect multiple splice sites. 
 
 In addition, since the model was trained using exonic variants, only exonic variant predictions are made. 
 
@@ -236,5 +248,11 @@ Here, 0.01 is the increase and 0.00 is the decrease in the probability that the 
 * Nodes: a computational unit made of an input, transfer connection and output. 
 
 ## References 
+* Zeng, T., Li, Y.I. Predicting RNA splicing from DNA sequence using Pangolin. Genome Biol 23, 103 (2022). https://doi.org/10.1186/s13059-022-02664-4 
+* Kishore Jaganathan, Sofia Kyriazopoulou Panagiotopoulou, Jeremy F. McRae, ..., Serafim Batzoglou, Stephan J. Sanders, Kyle Kai-How Farh. “Predicting splicing from primary sequence with deep learning”. Cell. (n.d.). Retrieved June 20, 2022, from https://www.cell.com/cell/fulltext/S0092-8674(18)31629-5 
+* Cheng, J., Çelik, M.H., Kundaje, A. et al. MTSplice predicts effects of genetic variants on tissue-specific splicing. Genome Biol 22, 94 (2021). https://doi.org/10.1186/s13059-021-02273-7 
+
+
+
 
 
