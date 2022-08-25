@@ -8,6 +8,7 @@ This page includes:
 * Pangolin Usage 
 * MTSplice Usage 
 * SpliceAI Usage 
+* Another Current Tool
 * Glossary 
 
 To learn more about RNA splicing and deep learning prediction in this field, visit this [page](https://snehabalaji.github.io/Technical/). I strongly recommended gathering foundational knowledge in both fields before proceeding to use the splicing tools. 
